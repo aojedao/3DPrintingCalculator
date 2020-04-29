@@ -481,32 +481,18 @@ class solicitud(opciones):
 
     def analisis_tend(self,data):
 
-        final=[]
-        mat=[]
-        energia = []
-        tiempous = []
-        tiempopro = []
-
+        final=list_array(len(data))
+        #1 mat
+        #2 energia = []
+        # 3tiempous = []
+        #4 tiempopro = []
 
         for i in data:
+            final.insertar([i[0],i[1][32].sumatoria(),i[1][20].sumatoria(),i[1][5].sumatoria(),i[1][14].sumatoria() + i[1][15].sumatoria() + i[1][5].sumatoria()])
 
-            mat.append([i[0],i[1][32].sumatoria()])
-            energia.append([i[0], i[1][20].sumatoria()])
-            tiempous.append([i[0], i[1][5].sumatoria()])
-            tiempopro.append([i[0], i[1][14].sumatoria() + i[1][15].sumatoria() + i[1][5].sumatoria()])
-
-
-        final.append(mat)
-        final.append(energia)
-        final.append(tiempous)
-        final.append(tiempopro)
-
-
+        
         return final
 
-a=solicitud()
-c=a.cargar_cotizacion()
-a.analisis_tend(c)
 
 
 
