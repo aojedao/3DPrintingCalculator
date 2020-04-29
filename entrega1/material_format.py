@@ -1,0 +1,137 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'material_format.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Dialog4(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(640, 480)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_2.setFont(font)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
+        self.formLayout = QtWidgets.QFormLayout()
+        self.formLayout.setObjectName("formLayout")
+        self.label = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(12)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
+        self.maker = QtWidgets.QLineEdit(Dialog)
+        self.maker.setObjectName("maker")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.maker)
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.diameter_material = QtWidgets.QLineEdit(Dialog)
+        self.diameter_material.setObjectName("diameter_material")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.diameter_material)
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_4)
+        self.reel_cost = QtWidgets.QLineEdit(Dialog)
+        self.reel_cost.setObjectName("reel_cost")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.reel_cost)
+        self.label_5 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_5)
+        self.size_reel = QtWidgets.QLineEdit(Dialog)
+        self.size_reel.setObjectName("size_reel")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.size_reel)
+        self.label_6 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setObjectName("label_6")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_6)
+        self.density = QtWidgets.QLineEdit(Dialog)
+        self.density.setObjectName("density")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.density)
+        self.label_7 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_7.setFont(font)
+        self.label_7.setObjectName("label_7")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_7)
+        self.extruder_temperature = QtWidgets.QLineEdit(Dialog)
+        self.extruder_temperature.setObjectName("extruder_temperature")
+        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.extruder_temperature)
+        self.label_8 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setObjectName("label_8")
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.LabelRole, self.label_8)
+        self.bed_temperature = QtWidgets.QLineEdit(Dialog)
+        self.bed_temperature.setObjectName("bed_temperature")
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.bed_temperature)
+        self.verticalLayout.addLayout(self.formLayout)
+        self.button_save_material = QtWidgets.QDialogButtonBox(Dialog)
+        self.button_save_material.setOrientation(QtCore.Qt.Horizontal)
+        self.button_save_material.setStandardButtons(QtWidgets.QDialogButtonBox.Save)
+        self.button_save_material.setObjectName("button_save_material")
+        self.verticalLayout.addWidget(self.button_save_material)
+        self.data=None
+        self.retranslateUi(Dialog)
+        self.button_save_material.clicked.connect(self.save_material)
+        self.button_save_material.accepted.connect(Dialog.accept)
+        self.button_save_material.rejected.connect(Dialog.reject)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def save_material(self):
+        self.data=[self.maker.text(),float(self.diameter_material.text()),float(self.reel_cost.text())
+                   ,float(self.size_reel.text()),float(self.density.text()),float(self.extruder_temperature.text())
+                   ,float(self.bed_temperature.text())]
+
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label_2.setText(_translate("Dialog", "Material"))
+        self.label.setText(_translate("Dialog", "Fabricante:"))
+        self.label_3.setText(_translate("Dialog", "Diametro:"))
+        self.diameter_material.setPlaceholderText(_translate("Dialog", "mm"))
+        self.label_4.setText(_translate("Dialog", "Costo de carrete :"))
+        self.reel_cost.setPlaceholderText(_translate("Dialog", "pesos"))
+        self.label_5.setText(_translate("Dialog", "Tamaño de carrete:"))
+        self.size_reel.setPlaceholderText(_translate("Dialog", "kg"))
+        self.label_6.setText(_translate("Dialog", "Densidad:"))
+        self.density.setPlaceholderText(_translate("Dialog", "g/cm^3"))
+        self.label_7.setText(_translate("Dialog", "Temperatura de extrusor:"))
+        self.extruder_temperature.setPlaceholderText(_translate("Dialog", "°C"))
+        self.label_8.setText(_translate("Dialog", "temperatura de cama:"))
+        self.bed_temperature.setPlaceholderText(_translate("Dialog", "°C"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog4()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
