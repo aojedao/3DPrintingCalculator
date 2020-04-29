@@ -26,19 +26,20 @@ class Graficas:
         
         
     def grafico2(self,dias):
-        titulo = ['Energia consumida','Tiempo de uso de Impresora','tiempo de proceso consumido']
+        titulo = ['Material consumido ','Energia consumida','Tiempo de uso de Impresora','tiempo de proceso consumido']
         cantidad_anexos = len(titulo)
         datos = []
         slices = []
-
+        
         for i in range(1,cantidad_anexos+1):
-            ax = pyplot.subplot(1,3,i)
+            ax = pyplot.subplot(2,2,i)
 
             for a in dias.lista:
                 dato_uni = int(a[0])
                 datos.append(dato_uni)
                 slices_uni = a[i]  
                 slices.append(slices_uni)
+            
             
             datos.sort()
             ax.plot(datos,slices)
