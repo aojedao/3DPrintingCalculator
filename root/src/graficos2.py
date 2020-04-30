@@ -30,7 +30,7 @@ class Graficas:
         cantidad_anexos = len(titulo)
         datos = []
         slices = []
-        
+        colores = ('red','blue','green','pink','yellow','orange')
         for i in range(1,cantidad_anexos+1):
             ax = pyplot.subplot(2,2,i)
 
@@ -42,7 +42,7 @@ class Graficas:
             
             
             datos.sort()
-            ax.plot(datos,slices)
+            ax.plot(datos,slices, color = colores[i])
             ax.set_title(str(titulo[i-1]))
             ax.set_xlabel("dias")
             ax.set_ylabel("consumo")
