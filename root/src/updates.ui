@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1357</width>
+    <height>920</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cotizaciones</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="line_search"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_search">
+          <property name="text">
+           <string>Buscar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="button_date_search">
+            <property name="text">
+             <string>Buscar por fecha:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>inicio:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="start"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>final :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="end"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QListWidget" name="cot_lista"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="button_cot">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Cotizar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_tend_servicios">
+        <property name="text">
+         <string>Analisis de tendencia en los servicios</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_past_service">
+        <property name="text">
+         <string>abrir cotizacion</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="eliminar">
+        <property name="text">
+         <string>Eliminar cotizacion</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_mens_consume">
+        <property name="text">
+         <string>Análisis mensual de consumo</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1357</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuconfiguracion">
+    <property name="title">
+     <string>configuracion</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionimpresora"/>
+    <addaction name="actionGeneral"/>
+    <addaction name="actionmaterial_2"/>
+   </widget>
+   <addaction name="menuconfiguracion"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionimpresora">
+   <property name="text">
+    <string>Impresora</string>
+   </property>
+  </action>
+  <action name="actionmaterial">
+   <property name="text">
+    <string>Materiales</string>
+   </property>
+  </action>
+  <action name="actionGeneral">
+   <property name="text">
+    <string>General</string>
+   </property>
+  </action>
+  <action name="actionmaterial_2">
+   <property name="text">
+    <string>material</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../../../../proyects_u/impresion/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

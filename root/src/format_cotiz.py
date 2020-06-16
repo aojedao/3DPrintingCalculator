@@ -270,7 +270,7 @@ class Ui_Dialog(object):
 
     def save_dates(self):
         try:
-            self.dates_printer=[self.client_name.text(),self.date_client.text(),self.description.toPlainText(),self.printer.text(),self.filament.text(),float(self.weight.text()),
+            self.dates_printer=[self.client_name.text(),int(self.date_client.text()),self.description.toPlainText(),self.printer.text(),self.filament.text(),float(self.weight.text()),
                                 float(self.printer_time.text()),float(self.s_licing.text()),float(self.material_change.text()),float(self.transfer_star.text()),
                                 float(self.removal_piece.text()),float(self.removal_support.text()),float(self.aditional_work.text()),
                                 float(self.consumibles.text()),float(self.cob_ganancia.text()),float(self.lineEdit.text()),float(self.time_pre.text())]
