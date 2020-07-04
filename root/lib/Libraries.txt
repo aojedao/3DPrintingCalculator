@@ -6,6 +6,7 @@ Las librerias requeridas son:
  os
  pyqt5
  tk
+ pyqtchart
 
 Para instalar las librerias, puedes correr el siguiente comando en linux, o usar pip.
 
